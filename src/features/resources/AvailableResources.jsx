@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
+
 import { getResources } from "./availableResourcesSlice";
 import styles from "./AvailableResources.module.css";
+import Card from "./components/Card";
 
 export function AvailableResources() {
   const resources = useSelector((state) => state.resources);
@@ -13,15 +15,13 @@ export function AvailableResources() {
 
   return (
     <div className={styles.container}>
-      <h2>Available Resources</h2>
-      <ul>
-        {Object.keys(resources).map((key) => (
-          <li key={key}>
-            <strong>{`${key.toUpperCase()}: `}</strong>
-            {`${resources[key]}`}
-          </li>
-        ))}
-      </ul>
+      {Object.keys(resources).map((key) => (
+        <Card
+          key={key}
+          title={key}
+          text={`Browse all Rick and Morty ${key}.`}
+        />
+      ))}
     </div>
   );
 }

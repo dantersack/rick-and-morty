@@ -1,11 +1,12 @@
 import React from "react";
 import { AvailableResources } from "./features/resources/AvailableResources";
+import Header from "./components/Header";
 import "./App.css";
 
 function App() {
   return (
     <main className="App">
-      <h1>Rick and Morty</h1>
+      <Header />
       <AvailableResources />
     </main>
   );
