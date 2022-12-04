@@ -23,6 +23,7 @@ export const availableResourcesSlice = createSlice({
 
 export const { getResourcesSuccess } = availableResourcesSlice.actions;
 
+// TODO: replace with createAsyncThunk
 export const getResources = () => async (dispatch) => {
   try {
     const response = await resourcesApi.getAll();
