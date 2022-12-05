@@ -6,7 +6,7 @@ const Card = ({ title, text }) => {
       <h3>{title}</h3>
       <p>{text}</p>
       <div>
-        <a href={`/${title}`}>{title}</a>
+        <a href={`/${title}`}>See all {title}</a>
       </div>
     </div>
   );
